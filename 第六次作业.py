@@ -7,9 +7,9 @@ plt.rcParams['axes.unicode_minus']=False
 
 plt.figure(figsize=(9,9))
 
-x = np.linspace(-10,10,2000)
 X = np.array([0,1,2,3,-1,-2,-3])
 Y = np.array([-1.22,1.85,3.22,10.29,2.21,3.72,8.7])
+x = np.linspace(X.min()* 1.1, X.max() * 1.1,2000)
 
 
 def func(p, x):
@@ -37,7 +37,7 @@ plt.setp(ltext, fontsize='xx-large')
 plt.xlabel('安培/A')
 plt.ylabel('伏特/V')
 
-plt.xlim(x.min()* 1.1, x.max() * 1.1)
+plt.xlim(x.min(), x.max())
 plt.ylim(0, y.max() * 1.1)
 
 plt.xticks(fontsize=20)
